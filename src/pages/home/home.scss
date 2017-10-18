@@ -1,3 +1,16 @@
 page-home {
+   .forest-body{
+       background-color: #492E06;
+   }
+    .button {
+      margin-left: 15%;
+      width:70%;
+    }
 
+    .button:active {
+      transform: translateY(4px);
+    }
+    h1{
+        color:#9EC934;
+    }
 }

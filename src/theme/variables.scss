@@ -38,10 +38,14 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  forest-head: #593609,
+  forest-body:     #492E06
 );
 
-
+$toolbar-ios-title-font-size: 3em;
+$toolbar-md-title-font-size: 3em;
+$toolbar-wp-title-font-size: 3em;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
