@@ -8,10 +8,10 @@
 </ion-header>
 
 <ion-content padding class="forest-body">
-  <img class="button" (click)="clic()" src="assets/img/tree.png"/>
+  <img class="clicplace" (click)="clic()" src="assets/img/tree.png"/>
   <h1>Bois : {{score | number}} <span class="unite">rondins</span> </h1>
-  <h2>Hache en {{typehache[hache].mat }}</h2>
+  <h2 class="text-center">Hache en {{typehache[hache].mat }}</h2>
 <div *ngFor="let type of objectKeys(typehache)">
-  <p>{{type + ' : '+typehache[type].mat}}</p>
+  <button *ngIf="type > hache" class="forest-ui" ion-button full (click)="pay(typehache[type].price)">Hache en {{typehache[type].mat}} | Prix : {{typehache[type].price}} Rondins </button>
 </div>
 </ion-content>

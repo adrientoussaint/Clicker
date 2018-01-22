@@ -2,12 +2,21 @@ page-home {
    .forest-body{
        background-color: #492E06;
    }
-    .button {
+    .clicplace {
       margin-left: 15%;
       width:70%;
     }
 
-    .button:active {
+    .text-center{
+        text-align:center;
+    }
+
+    button.forest-ui{
+        background-color: grey;
+        color:#9EC934;
+    }
+
+    .clicplace:active {
       transform: translateY(4px);
     }
     h1{
