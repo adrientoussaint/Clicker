@@ -10,9 +10,10 @@
   <ion-content padding class="cave-body">
     <img class="clicplace" (click)="clic()" src="assets/img/rock.png"/>
     <h1>Pierre : {{score | number}} <span class="unite">tas</span> </h1>
-    <h2 class="text-center">Pioche en {{typehache[hache].mat }}</h2>
-  <div *ngFor="let type of objectKeys(typehache)">
-    <button *ngIf="type > hache" class="cave-ui" ion-button full (click)="pay(typehache[type].price)">Pioche en {{typehache[type].mat}} | Prix : {{typehache[type].price}} Rondins </button>
+    <h1>Bois : {{woods | number}} <span class="unite">rondins</span> </h1>
+    <h2 class="text-center" *ngIf="pioche!=-1">Pioche en {{typepioche[pioche].mat }}</h2>
+  <div *ngFor="let type of objectKeys(typepioche)">
+    <button *ngIf="type > pioche" class="cave-ui" ion-button full (click)="pay(typepioche[type].price,typepioche[type].pricebois)">Pioche en {{typepioche[type].mat}} | Prix : {{typepioche[type].price}} Tas<br> {{typepioche[type].pricebois}} Rondins </button>
   </div>
   </ion-content>
   
