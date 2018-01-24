@@ -13,6 +13,9 @@
   <h1>Pierre : {{rocks | number}} <span class="unite">tas</span> </h1>
   <h2 class="text-center">Hache en {{typehache[hache].mat }}</h2>
 <div *ngFor="let type of objectKeys(typehache)">
-  <button *ngIf="type > hache" class="forest-ui" ion-button full (click)="pay(typehache[type].price)">Hache en {{typehache[type].mat}} | Prix : {{typehache[type].price}} Rondins </button>
+  <button *ngIf="type > hache" class="forest-ui" ion-button full (click)="pay(typehache[type].price,typehache[type].item)">Hache en {{typehache[type].mat}} | Prix : {{typehache[type].price}} Rondins </button>
+</div>
+<div *ngFor="let outil of objectKeys(outilbois)">
+  <button class="forest-ui" ion-button full (click)="pay(outilbois[outil].price,outil)">{{outilbois[outil].name}} | Prix : {{outilbois[outil].price}} Rondins<br> Quantité : {{outilbois[outil].quantite}} </button>
 </div>
 </ion-content>
